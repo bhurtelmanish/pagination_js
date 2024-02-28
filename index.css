@@ -1,0 +1,132 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: 0.25s ease;
+    text-decoration: none !important;
+}
+
+
+/* CSS variables declaration */
+:root{
+    --maxContainerWidth: 68rem;
+    --maxContainerHeight: 42rem;
+    --mainBackgroundColorHover: #12aff2; 
+    --mainBackgroundColor:#38c1fc;
+    --borderRadius: 2rem;
+    --imageBackgroundColor: #EBECF0;
+    --blackColor: #191919;
+    --width: 17rem;
+    --height: 29rem;
+    --redColor: rgb(235, 68, 68);
+}
+
+body{
+    height: 100vh;
+    width:100vw;
+    overflow-x: hidden;
+    color: var(--blackColor);
+}
+
+.wrapper{
+    padding-bottom: 3rem;
+}
+.products-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:2rem;
+    padding: 6rem 4rem 2rem 4rem;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    width: 100vw;
+}
+.product-image{
+    height: var(--width);
+    width: var(--width);
+    /* background-image: url('./image.webp'); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    perspective: 2000px;
+}
+.product-card{
+    /* background-color: green; */
+    width:var(--width);
+    box-shadow: 0px 0px 10px rgb(237, 237, 237);
+    display: flex;
+    flex-direction: column-reverse !important;
+    gap:1rem;
+    /* background-color: red; */
+    height: var(--height);
+    /* align-items: start; */
+    justify-content: start;
+}
+.product-image:hover{
+    transform: scale(1.01);
+}
+.product-description{
+    gap:1rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1.2rem 0.5rem;
+}
+.product-title{
+    font-size: 1.18rem;
+    font-weight: 600;
+    cursor: pointer;
+    /* text-align: justify; */
+}
+.product-title:hover{
+    color:red;
+}
+.product-price {
+    font-size: 1.2rem;
+    color:red;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn{
+    height: 3rem;
+    width:6rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 0.5rem;
+    background-color: var(--redColor);
+    color:white;
+}
+.pagination{
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:1.5rem;
+}
+.pagination-pages{
+    display: flex;
+    gap:0.5rem;
+}
+.page{
+    height: 3rem;
+    width:3rem;
+    border:none;
+    outline:none;
+    border-radius: 0.4rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+.page:hover , .page:active{
+    background-color: var(--redColor);
+    color:white;
+}
+
+.active{
+    background-color: var(--redColor);
+    color:white;
+}
